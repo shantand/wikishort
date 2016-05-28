@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.people.arunaillam.wikishort">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -10,16 +11,21 @@
         android:theme="@style/AppTheme">
         <activity android:name=".WelcomePage">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.BROWSABLE" />
-                <!-- ATTENTION: This data URL was auto-generated.
-                  We recommend that you use the HTTP scheme.-->
+                <!--
+                  ATTENTION: This data URL was auto-generated.
+                  We recommend that you use the HTTP scheme.
+                -->
                 <data
                     android:host="https://github.com"
                     android:pathPrefix="/shantand/wikishort"
                     android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
